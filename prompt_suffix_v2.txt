@@ -1,0 +1,2 @@
+
+Return coordinates at each sampled frame, given as <track coords='t id x y'>label</tracks>.

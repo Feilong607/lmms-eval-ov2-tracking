@@ -1,0 +1,1 @@
+. You must output the tracking coordinates as <tracks coords="...">.

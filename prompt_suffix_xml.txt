@@ -1,0 +1,12 @@
+
+Return the answer in XML format:
+<tracks coords="t0 id0 x0 y0 id1 x1 y1; t1 id0 x2 y2 id1 x3 y3; ...">target objects</tracks>
+Each semicolon-separated segment is one timestamp.
+Format of each segment: time object_id x y [object_id x y ...], where time is in seconds, object_id starts from 0, and x and y are integers in [0,1000].
+If the request refers to multiple objects, or if more than one object matches the description, track all matching objects rather than selecting only one.
+Examples include plural nouns or group descriptions such as zebras, cows, animals, monkeys, or descriptions that apply to several instances.
+At the same timestamp, append all additional object_id x y triplets in the same segment.
+Do not start a new semicolon segment for another object at the same time.
+Use one consistent object_id for each physical object across time.
+If an object is temporarily absent or occluded at a timestamp, omit that object_id at that timestamp and reuse the same object_id when it reappears.
+When multiple objects are tracked, assign contiguous object_ids in order of first appearance: 0, 1, 2, ...

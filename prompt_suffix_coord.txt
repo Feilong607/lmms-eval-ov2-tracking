@@ -1,0 +1,1 @@
+ Output the tracking coordinates as <tracks coords="...">; do not answer in natural language.
